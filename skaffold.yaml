@@ -11,13 +11,13 @@ build:
       docker:
         dockerfile: Dockerfile
     - image: anagnole/client
-  context: client
-  sync:
-    manual:
-      - src: '**/*.js'
-        dest: .
-  docker:
-    dockerfile: Dockerfile
+      context: client
+      sync:
+        manual: 
+          - src: '**/*.js'
+            dest: .
+      docker:
+        dockerfile: Dockerfile
   local:
     push: false
   # googleCloudBuild:
